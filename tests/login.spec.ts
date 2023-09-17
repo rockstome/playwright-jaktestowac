@@ -1,9 +1,10 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Login tests', () => {
+  const url = 'https://demo-bank.vercel.app/';
 
   test('login with correct credentials', async ({ page }) => {
-    await page.goto('https://demo-bank.vercel.app/');
+    await page.goto(url);
     await expect(page).toHaveTitle(new RegExp('Logowanie'));
     await page.getByTestId('login-input').fill('admin123');
     await page.getByTestId('password-input').fill('admin123');
@@ -13,7 +14,7 @@ test.describe('Login tests', () => {
   });
 
   test('login with incorrect login', async ({ page }) => {
-    await page.goto('https://demo-bank.vercel.app/');
+    await page.goto(url);
     await page.getByTestId('login-input').click();
     await page.getByTestId('login-input').fill('admin');
     await page.getByTestId('password-input').click();
