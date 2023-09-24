@@ -48,10 +48,11 @@
 - `ALT + SHIFT + F` - format document (or RMC > Format Document)
 - `CTRL + ,` - setting
 - `ALT + SHIFT + ↓` lub `ALT + SHIFT + ↑` - duplikuje aktualna linijke
+- `F2` - rename
 
 ## terminal
 
-- `code .` - otwiera aktualny folder w VS code
+- `code .` - otwiera aktualny folder w nowej instancji VS code
 
 ## inne
 
@@ -61,3 +62,7 @@
 # GDZIE SKONCZYLEM
 
 https://jaktestowac.pl/lesson/pw1s02l02/ - 12:31
+
+# pytania
+
+jaka jest roznica miedzy extension prettier a package prettier
