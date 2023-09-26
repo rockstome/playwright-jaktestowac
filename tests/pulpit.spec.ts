@@ -14,9 +14,7 @@ test.describe('Pulpit tests', () => {
     await page.getByRole('button', { name: 'wykonaj' }).click();
     await page.getByTestId('close-button').click();
 
-    await expect(page.locator('#show_messages')).toHaveText(
-      'Przelew wykonany! Michael Scott - 5,00PLN - eluwina',
-    );
+    await expect(page.locator('#show_messages')).toHaveText('Przelew wykonany! Michael Scott - 5,00PLN - eluwina');
   });
 
   test('topup with correct data', async ({ page }) => {
@@ -31,8 +29,6 @@ test.describe('Pulpit tests', () => {
     await page.getByRole('button', { name: 'doładuj telefon' }).click();
     await page.getByTestId('close-button').click();
 
-    await expect(page.locator('#show_messages')).toHaveText(
-      'Doładowanie wykonane! 123,00PLN na numer 500 xxx xxx',
-    );
+    await expect(page.locator('#show_messages')).toHaveText('Doładowanie wykonane! 123,00PLN na numer 500 xxx xxx');
   });
 });

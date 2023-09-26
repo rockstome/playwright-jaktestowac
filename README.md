@@ -27,6 +27,10 @@
 - `await expect(page).toHaveTitle('eluwina', {timeout: 1 * 1000});` - nadpisuje timeout zdefiniowany w playwright.config.ts (nie timeout a expect.timeout)
 - expect ma defaultowo 5_000 ms timeout, mozna to nadpisac w pliku konfiguracyjnym: { expect: { timeout: 1_000 } }
 
+## trace viewer
+
+- można powiekszyc strone i tam normalnie badac sobie DOM, pisac lokatory etc.
+
 ## inne
 
 - `test.describe('some group name', () =>{});` - grupowanie testow
@@ -61,8 +65,9 @@
 
 # GDZIE SKONCZYLEM
 
-https://jaktestowac.pl/lesson/pw1s02l02/ - 12:31
+https://jaktestowac.pl/lesson/pw1s02l03/ - 12:45
 
-# pytania
+# pytania / problemy
 
 jaka jest roznica miedzy extension prettier a package prettier
+czy filtorwanie w raporcie html dziala (mntt-1234, mntt-1235 etc.)
