@@ -24,8 +24,11 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     headless: true,
-    trace: 'retain-on-failure',
-    video: 'retain-on-failure',
+    trace: { mode: 'retain-on-failure' },
+    video: {
+      mode: 'retain-on-failure',
+      size: { height: 300, width: 400 },
+    },
     screenshot: 'only-on-failure',
   },
   timeout: 10_000,
@@ -33,7 +36,6 @@ export default defineConfig({
     timeout: 3_000,
   },
 
-  /* Configure projects for major browsers */
   projects: [
     // {
     //   name: 'chromium',

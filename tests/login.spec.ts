@@ -20,6 +20,7 @@ test.describe('Login tests', () => {
     await page.getByTestId('login-input').fill('admin');
     await page.getByTestId('password-input').click();
     // await page.getByTestId('login-input').blur();
-    await expect(page.getByTestId('error-login-id')).toHaveText('Identyfikator ma min. 8 znaków');
+    await expect(page.getByTestId('error-login-id')).toHaveText('identyfikator ma min. 8 znaków');
+    await expect(page).toHaveScreenshot({ mask: [page.getByTestId('error-login-id')] });
   });
 });

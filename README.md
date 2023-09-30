@@ -53,6 +53,7 @@
 - `CTRL + ,` - setting
 - `ALT + SHIFT + ↓` lub `ALT + SHIFT + ↑` - duplikuje aktualna linijke
 - `F2` - rename
+- `CTRL + SHIFT + R` - refactor
 
 ## terminal
 
@@ -62,12 +63,14 @@
 
 - PPM na pliku > Open Timeline - lokalna historia zmian w pliku! mozna porownywac z poprzednia wersja czy z aktualna
 - w timeline jak nam pokazuje roznice to mozna przerzucac zmiany z jednego porownania na drugie
+- jak wkleimy sciezke pliku (przykladowo skopiowana z trace viewera) w wyszukiwarke to bardzo latwo mozemy ten plik otworzyc do edycji
 
 # GDZIE SKONCZYLEM
 
-https://jaktestowac.pl/lesson/pw1s02l03/ - 12:45
+https://jaktestowac.pl/lesson/pw1s02l04/ - poczatek
+https://www.codecademy.com/courses/learn-typescript/lessons/introduction-to-typescript/exercises/any
 
 # pytania / problemy
 
-jaka jest roznica miedzy extension prettier a package prettier
+jaka jest roznica miedzy extension prettier a package prettier?
 czy filtorwanie w raporcie html dziala (mntt-1234, mntt-1235 etc.)
