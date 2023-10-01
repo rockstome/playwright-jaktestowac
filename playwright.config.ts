@@ -24,12 +24,13 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     headless: true,
-    trace: { mode: 'retain-on-failure' },
+    trace: { mode: 'on' },
     video: {
       mode: 'retain-on-failure',
       size: { height: 300, width: 400 },
     },
     screenshot: 'only-on-failure',
+    baseURL: 'https://demo-bank.vercel.app',
   },
   timeout: 10_000,
   expect: {

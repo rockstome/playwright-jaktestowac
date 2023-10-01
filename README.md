@@ -67,7 +67,7 @@
 
 # GDZIE SKONCZYLEM
 
-https://jaktestowac.pl/lesson/pw1s02l04/ - poczatek
+https://jaktestowac.pl/lesson/pw1s02l07/ : 4:40
 https://www.codecademy.com/courses/learn-typescript/lessons/introduction-to-typescript/exercises/any
 
 # pytania / problemy
