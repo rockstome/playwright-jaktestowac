@@ -1,4 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import inspector from 'inspector';
+
+let isDebug = !!inspector.url();
 
 /**
  * Read environment variables from file.
@@ -32,7 +35,7 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     baseURL: 'https://demo-bank.vercel.app',
   },
-  timeout: 10_000,
+  timeout: isDebug ? 10_000_000 : 10_000,
   expect: {
     timeout: 3_000,
   },

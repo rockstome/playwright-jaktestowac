@@ -8,6 +8,10 @@ test.describe('Pulpit tests', () => {
     await page.getByTestId('login-button').click();
 
     await page.locator('#widget_1_transfer_receiver').selectOption('3');
+    let a = Number('23');
+    console.log(a.toString());
+    console.log(`${a}`);
+    console.log(String(a));
     await page.locator('#widget_1_transfer_amount').fill('5');
     await page.locator('#widget_1_transfer_title').fill('eluwina');
 

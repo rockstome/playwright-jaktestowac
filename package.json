@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "test:headed": "npx playwright test --headed"
+    "test:headed": "npx playwright test --headed",
+    "test:pulpit": "npm run test pulpit.spec.ts -- --headed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.38.0"
+    "@playwright/test": "^1.38.0",
+    "@types/node": "^20.8.3"
   }
 }
