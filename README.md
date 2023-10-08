@@ -67,10 +67,20 @@
 
 # GDZIE SKONCZYLEM
 
-https://jaktestowac.pl/lesson/pw1s02l07/ : 4:40
+https://jaktestowac.pl/lesson/pw1s02l07/ : 29:00
 https://www.codecademy.com/courses/learn-typescript/lessons/introduction-to-typescript/exercises/any
 
 # pytania / problemy
 
 jaka jest roznica miedzy extension prettier a package prettier?
 czy filtorwanie w raporcie html dziala (mntt-1234, mntt-1235 etc.)
+
+# MINDBLOW
+
+- https://fluffy-fiesta-97qw7xw5g4g27p4x.github.dev/ i uruchamianie testow w chmurze
+- LIVE SHARE
+
+# zglosic
+
+- jak zaznaczam kika testow i chce je uruchomic to odpalaja sie wszystkie w calym pliku/describe (to jescze do zbadania co sie dokaldnie dzieje).
+  zobaczyc czy poza loopem tez sie to dzieje ze nie mozna puscic tylko 2
