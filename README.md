@@ -41,6 +41,28 @@
 # TYPESCRIPT
 
 - aby korzystac ze string interpolation zamieniamy ' na \` w stringu i uzywamy placeholdera \$\{\}, czyli 'name: Tomasz' zmianimy na \`name: ${someVariable}\`
+- mozna uniknac typowania, deklarujac zmienna bez typu `let guess; guess = "pink"; guess = 23;` (to nie do konca prawda, typescript zaklada type any dla zmiennej guess)
+- jak chcemy wymusic typowanie to uzuywamy type annotation `let someVariable: string`
+- (javascript) jak mamy funkcje z 1 parametrem, a wywolamy ja bez parametru, to zostanie przekazany undefined. aby w typescript oznaczyc parametr jako opcjonalny dodajemy znak `?` po nazwie zmiennej, przykladowo `function printValue(someValue?: string)`
+- documentation comment: zaczynamy pisac `/**`
+- krotka / tuple `let examAnswers: [boolean, string] = [true, 'some string'];`
+- `let examAnswers= [true, false, false];` czy to tablica `boolean[]` czy krotka `[boolean, boolean, boolean]`? Less restrictive type, czyli tablica
+- `let ordersArrayTS: [Pet, number][]` - tablica krotek
+- `enum DirectionString { North = 'NORTH', South = 'SOUTH', East = 'EAST', West = 'WEST' }` - string enum. wybierac string enum na rzecz numeric enum (jeden z argumento jest taki ze nie przypiszemy stringa do string enum, a mozemy przypisac number do numeric enum)
+- `type Person = { name: string, age: number }; let aCompany: {companyName: string, boss: Person, employees: Person[]};` - type alias, wygodne zeby nie duplikowac kodu. alias to tylko nazwa dla typu, jak typy sie zgadzaja to mozemy do zmiennej z aliasem przypisac wartosc zmiennej z innym aliasem, czyli `type s1 = string; type s2 = string; let v1: s1 = 'test'; let v2: s2 = v1;`
+- `type OperatorFunction = (n1:number, n2:number) => number;` - function type
+- `type Family<T> = {parents: [T, T], mate: T, children: T[]};` - generic type
+- A type guard is a conditional that checks if a variable is a certain type: `if (typeof margin === 'string') {/*some code*/}`
+- `let val: string | number` - type union, kazdy typ w uni nazywa sie type member
+- `function printMe(value: string | number): void {if (typeof value === 'string') value.toUpperCase();else value.toFixed(2);}` - dzieki typeguard mamy dostep do metod konkretnego typu (type narrowing)
+- Array union - `(string | number)[]` - tablica ktora przyjmuje zmienne typu string lub number
+- `type Color = 'green' | 'yellow' | 'red';` - union with literal types, taki type alias jest wygodny zeby go uzywac jako parametr metody. wtedy taka metoda moze przyjmowac tylko zdefiniowane wartosci!
+- `if ('length' in var) {...}` - type guard sprawdzajacy czy zmienna var ma property lenght
+- `interface Developer extends Human` - kopiowanie type membersow z jednego interfejsu do drugiego. klasa ktora bedzie implementowac interfejs Developer bedzie tez musiala implementowac metody interfejsu Human
+- `interface OptionsType { name: string; size?: string;}` - prop size jest optional type member
+- `[propertyName: string]: string` - index signature
+- string, number, boolean, bigint, null, undefined, symbol - primitives in JS (to ze typeof null zwraca object to bug w js ;-)
+- `const name: 'Bob'` - typescript pokazuje ze typ to 'Bob', ta stala moze miec tylko taka wartosc, nazywa sie to string literal type
 
 # VISUAL STUDIO
 
@@ -65,10 +87,10 @@
 - w timeline jak nam pokazuje roznice to mozna przerzucac zmiany z jednego porownania na drugie
 - jak wkleimy sciezke pliku (przykladowo skopiowana z trace viewera) w wyszukiwarke to bardzo latwo mozemy ten plik otworzyc do edycji
 
-# GDZIE SKONCZYLEM
+# TUTORIALE
 
 https://jaktestowac.pl/lesson/pw1s02l07/ : 29:00
-https://www.codecademy.com/courses/learn-typescript/lessons/introduction-to-typescript/exercises/any
+https://learntypescript.dev/02/l3-type-inference
 
 # pytania / problemy
 
@@ -78,9 +100,8 @@ czy filtorwanie w raporcie html dziala (mntt-1234, mntt-1235 etc.)
 # MINDBLOW
 
 - https://fluffy-fiesta-97qw7xw5g4g27p4x.github.dev/ i uruchamianie testow w chmurze
-- LIVE SHARE
+- LIVE SHARE!
 
 # zglosic
 
-- jak zaznaczam kika testow i chce je uruchomic to odpalaja sie wszystkie w calym pliku/describe (to jescze do zbadania co sie dokaldnie dzieje).
-  zobaczyc czy poza loopem tez sie to dzieje ze nie mozna puscic tylko 2
+- jak zaznaczam kika testow i chce je uruchomic to odpalaja sie wszystkie w calym pliku/describe (to jescze do zbadania co sie dokaldnie dzieje). zobaczyc czy poza loopem tez sie to dzieje ze nie mozna puscic tylko 2
