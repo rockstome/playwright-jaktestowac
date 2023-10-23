@@ -42,11 +42,15 @@
 
 - aby korzystac ze string interpolation zamieniamy ' na \` w stringu i uzywamy placeholdera \$\{\}, czyli 'name: Tomasz' zmianimy na \`name: ${someVariable}\`
 - mozna uniknac typowania, deklarujac zmienna bez typu `let guess; guess = "pink"; guess = 23;` (to nie do konca prawda, typescript zaklada type any dla zmiennej guess)
+- jak nie uzyjemy type annotation lub value assignment to zmienna bedzie typu any
+- dla typu any nie ma type checkingu
 - jak chcemy wymusic typowanie to uzuywamy type annotation `let someVariable: string`
 - (javascript) jak mamy funkcje z 1 parametrem, a wywolamy ja bez parametru, to zostanie przekazany undefined. aby w typescript oznaczyc parametr jako opcjonalny dodajemy znak `?` po nazwie zmiennej, przykladowo `function printValue(someValue?: string)`
 - documentation comment: zaczynamy pisac `/**`
-- krotka / tuple `let examAnswers: [boolean, string] = [true, 'some string'];`
-- `let examAnswers= [true, false, false];` czy to tablica `boolean[]` czy krotka `[boolean, boolean, boolean]`? Less restrictive type, czyli tablica
+- `Array<string>` jest tym samym co `string[]`
+- krotka / tuple `let examAnswers: [boolean, string] = [true, 'some string'];` - krotke mozna traktowac jako tablice ze stalao liczba elementow
+- typescript sam nie okresli typu z uzycia, jak chcemy stworzyc zmienna typu tuple to musimy uzyc type annotation
+- `let examAnswers = [true, false, false];` czy to tablica `boolean[]` czy krotka `[boolean, boolean, boolean]`? Less restrictive type, czyli tablica
 - `let ordersArrayTS: [Pet, number][]` - tablica krotek
 - `enum DirectionString { North = 'NORTH', South = 'SOUTH', East = 'EAST', West = 'WEST' }` - string enum. wybierac string enum na rzecz numeric enum (jeden z argumento jest taki ze nie przypiszemy stringa do string enum, a mozemy przypisac number do numeric enum)
 - `type Person = { name: string, age: number }; let aCompany: {companyName: string, boss: Person, employees: Person[]};` - type alias, wygodne zeby nie duplikowac kodu. alias to tylko nazwa dla typu, jak typy sie zgadzaja to mozemy do zmiennej z aliasem przypisac wartosc zmiennej z innym aliasem, czyli `type s1 = string; type s2 = string; let v1: s1 = 'test'; let v2: s2 = v1;`
@@ -61,6 +65,7 @@
 - `interface Developer extends Human` - kopiowanie type membersow z jednego interfejsu do drugiego. klasa ktora bedzie implementowac interfejs Developer bedzie tez musiala implementowac metody interfejsu Human
 - `interface OptionsType { name: string; size?: string;}` - prop size jest optional type member
 - `[propertyName: string]: string` - index signature
+- The type `{ [field: string]: any }` means an object whose property names are of type string, with property values of type any.`const formValues: { [field: string]: any } = {firstName: "Bob", surname: "Smith", age: 30,};`
 - string, number, boolean, bigint, null, undefined, symbol - primitives in JS (to ze typeof null zwraca object to bug w js ;-)
 - `const name: 'Bob'` - typescript pokazuje ze typ to 'Bob', ta stala moze miec tylko taka wartosc, nazywa sie to string literal type
 
@@ -90,12 +95,13 @@
 # TUTORIALE
 
 https://jaktestowac.pl/lesson/pw1s02l07/ : 29:00
-https://learntypescript.dev/02/l3-type-inference
+https://learntypescript.dev/03/l5-tuples#understanding-a-tuple
 
 # pytania / problemy
 
 jaka jest roznica miedzy extension prettier a package prettier?
 czy filtorwanie w raporcie html dziala (mntt-1234, mntt-1235 etc.)
+roznica miedzy var a let
 
 # MINDBLOW
 
