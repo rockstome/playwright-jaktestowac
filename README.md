@@ -19,12 +19,12 @@
 - `npx playwright show-report` - pokazuje raport HTML z ostatniego uruchomienia
 - `npx playwright test --headed` - odpala testy w trybie headed (z GUI przegladarki), bez wzgledu na konfiguracje w pliku playwright.config.ts
 - `npx playwright install` - zainstaluje nam przegladarki jak nam brakuje
-- `npm install @playwright/test@latest` - update do najnowszej wersji. Mozna tez w package.json wpisac z palca wersje i pozniej w terminalu `npm install`
+- `npm install @playwright/test@latest` - update do najnowszej wersji. Mozna tez w package.json wpisac z palca wersje i pozniej w terminalu `npm install` (tego drugiego nie sprawdzalem)
 
 ## asercje
 
 - `await expect(page).toHaveTitle('eluwina');` - asercja na tytul z timeoutem z configa
-- `await expect(page).toHaveTitle('eluwina', {timeout: 1 * 1000});` - nadpisuje timeout zdefiniowany w playwright.config.ts (nie timeout a expect.timeout)
+- `await expect(page).toHaveTitle('eluwina', {timeout: 1 * 1000});` - timeout na asercje, bez znaczenia co mamhy ustawione w playwright.config.ts (nie timeout a expect.timeout)
 - expect ma defaultowo 5_000 ms timeout, mozna to nadpisac w pliku konfiguracyjnym: { expect: { timeout: 1_000 } }
 
 ## trace viewer
