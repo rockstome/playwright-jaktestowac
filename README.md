@@ -95,13 +95,14 @@
 # TUTORIALE
 
 https://jaktestowac.pl/lesson/pw1s02l07/ : 29:00
+https://www.youtube.com/watch?v=mfml3kxcMZE : 40:57
 https://learntypescript.dev/03/l5-tuples#understanding-a-tuple
 
 # pytania / problemy
 
-jaka jest roznica miedzy extension prettier a package prettier?
-czy filtorwanie w raporcie html dziala (mntt-1234, mntt-1235 etc.)
-roznica miedzy var a let
+-jaka jest roznica miedzy extension prettier a package prettier?  
+-czy filtorwanie w raporcie html dziala (mntt-1234, mntt-1235 etc.)  
+-roznica miedzy var a let
 
 # MINDBLOW
 

@@ -34,6 +34,7 @@ export default defineConfig({
     },
     screenshot: 'only-on-failure',
     baseURL: 'https://demo-bank.vercel.app',
+    colorScheme: 'dark',
   },
   timeout: isDebug ? 10_000_000 : 10_000,
   expect: {
